@@ -74,9 +74,11 @@
       .carousel .slide .carousel-indicators li.active {
         background-color: #fb4226; }
   .carousel .slide .carousel-control-prev {
-    left: -5%; }
+    width: 5%;
+    left: 0%; }
   .carousel .slide .carousel-control-next {
-    right: -5%; }
+    width: 5%;
+    right: 0%; }
 
 .selling-list {
   width: 75%;
@@ -300,5 +302,155 @@
       top: 50%;
       right: -13%;
       transform: translateY(-50%); }
+
+.picking-place {
+  padding-top: 40px; }
+  .picking-place .nav .nav-item {
+    border: solid rgba(51, 51, 51, 0.5) 1px;
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+    position: relative;
+    padding: 10px; }
+    .picking-place .nav .nav-item::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      height: 70%;
+      width: 1px;
+      transform: translateY(-50%);
+      background-color: rgba(51, 51, 51, 0.5); }
+    .picking-place .nav .nav-item:first-child {
+      border-left: solid rgba(51, 51, 51, 0.5) 1px; }
+    .picking-place .nav .nav-item:last-child {
+      border-right: solid rgba(51, 51, 51, 0.5) 1px; }
+      .picking-place .nav .nav-item:last-child::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        height: 70%;
+        width: 1px;
+        transform: translateY(-50%);
+        background-color: rgba(255, 255, 255, 0); }
+    .picking-place .nav .nav-item .nav-link {
+      opacity: 0.5; }
+      .picking-place .nav .nav-item .nav-link.active {
+        background-color: transparent;
+        opacity: 1; }
+  .picking-place .tab-content .tab-pane {
+    padding: 0;
+    width: 100%;
+    display: inline-block;
+    align-items: center; }
+    .picking-place .tab-content .tab-pane .list-cinemas {
+      float: left;
+      margin-left: 10%;
+      min-height: 705px;
+      border: 1px solid rgba(51, 51, 51, 0.5);
+      border-bottom: 1px solid rgba(51, 51, 51, 0.5);
+      width: 20%;
+      overflow-y: hidden; }
+      .picking-place .tab-content .tab-pane .list-cinemas::before {
+        content: "";
+        position: absolute;
+        width: 1px;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        height: 100%;
+        background-color: rgba(51, 51, 51, 0.5); }
+      .picking-place .tab-content .tab-pane .list-cinemas .cinema-item {
+        padding: 20px;
+        display: flex;
+        position: relative; }
+        .picking-place .tab-content .tab-pane .list-cinemas .cinema-item::before {
+          content: "";
+          position: absolute;
+          width: 80%;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          height: 1px;
+          background-color: rgba(51, 51, 51, 0.5); }
+        .picking-place .tab-content .tab-pane .list-cinemas .cinema-item:last-child::before {
+          content: "";
+          position: absolute;
+          width: 80%;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          height: 1px;
+          background-color: rgba(51, 51, 51, 0); }
+        .picking-place .tab-content .tab-pane .list-cinemas .cinema-item img {
+          width: 50px;
+          height: 50px; }
+        .picking-place .tab-content .tab-pane .list-cinemas .cinema-item .cinema-item__detail {
+          padding-left: 20px; }
+          .picking-place .tab-content .tab-pane .list-cinemas .cinema-item .cinema-item__detail h5 {
+            font-size: 15px;
+            color: coral; }
+    .picking-place .tab-content .tab-pane .list-movies {
+      float: left;
+      min-height: 705px;
+      width: calc(100% - 30% - 92px);
+      border: 1px solid rgba(51, 51, 51, 0.5);
+      position: relative;
+      overflow-y: auto;
+      overflow-x: hidden; }
+      .picking-place .tab-content .tab-pane .list-movies .movie-item {
+        padding: 20px;
+        position: relative; }
+        .picking-place .tab-content .tab-pane .list-movies .movie-item::before {
+          content: "";
+          position: absolute;
+          width: 95%;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          height: 1px;
+          background-color: rgba(51, 51, 51, 0.5); }
+        .picking-place .tab-content .tab-pane .list-movies .movie-item:last-child::before {
+          content: "";
+          position: absolute;
+          width: 80%;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          height: 1px;
+          background-color: rgba(51, 51, 51, 0); }
+        .picking-place .tab-content .tab-pane .list-movies .movie-item .movie-detail {
+          display: flex; }
+          .picking-place .tab-content .tab-pane .list-movies .movie-item .movie-detail img {
+            width: 50px;
+            height: 50px; }
+          .picking-place .tab-content .tab-pane .list-movies .movie-item .movie-detail .movie-item__detail {
+            padding-left: 20px; }
+            .picking-place .tab-content .tab-pane .list-movies .movie-item .movie-detail .movie-item__detail h5 {
+              font-size: 15px; }
+        .picking-place .tab-content .tab-pane .list-movies .movie-item .start-time a {
+          width: calc(25% - 10px);
+          float: left;
+          font-family: 'SF Medium';
+          font-size: 14px;
+          font-weight: 400;
+          margin: 0 10px 10px 0;
+          padding: 5px 0;
+          transition: all .2s;
+          text-decoration: none;
+          display: block;
+          text-align: center;
+          background-color: rgba(246, 246, 246, 0.5);
+          border-radius: 7px;
+          color: #9b9b9b;
+          border: 1px solid #e4e4e4; }
+          .picking-place .tab-content .tab-pane .list-movies .movie-item .start-time a span {
+            font-family: 'SF Medium';
+            font-size: 18px;
+            font-weight: 700;
+            color: #108f3e; }
+    .picking-place .tab-content .tab-pane .clear {
+      clear: both; }
 
 /*# sourceMappingURL=main.css.map */

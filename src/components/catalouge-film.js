@@ -1,46 +1,21 @@
 import React, { Component } from 'react'
-
-export default class CatalougeFilm extends Component {
+import PickingFast from "./picking-fast";
+import {connect} from "react-redux";
+import {actGetListMovieAPI} from "../redux/actions/index.js";
+import Movie from "./movie";
+class CatalougeFilm extends Component {
+    componentDidMount(){
+        this.props.getListMovie();
+    }
+    renderHTML = () => {
+        return this.props.listMovie.map((movie,index)=>{
+            return <Movie key={index} movie={movie}/>
+        })
+    }
     render() {
         return (
             <div className="selling-list container">
-                <div className="selling-fast">
-                    <div className="selectPhim dropdown">
-                        <div className="selectMenu" data-toggle="dropdown">
-                            Phim
-                            </div>
-                        <ul className="dropdown-menu selectScroll">
-                            
-                        </ul>
-                    </div>
-                    <div className="selectCinema dropdown">
-                        <div className="selectMenu" data-toggle="dropdown">
-                            Rạp
-                        </div>
-                        <ul className="dropdown-menu selectScroll">
-                            
-                        </ul>
-                    </div>
-                    <div className="selectDate dropdown">
-                        <div className="selectMenu" data-toggle="dropdown">
-                            Ngày xem
-                        </div>
-                        <ul className="dropdown-menu selectScroll">
-                            
-                        </ul>
-                    </div>
-                    <div className="selectSession dropdown">
-                        <div className="selectMenu" data-toggle="dropdown">
-                            Suất Chiếu
-                        </div>
-                        <ul className="dropdown-menu selectScroll">
-                            
-                        </ul>
-                    </div>
-                    <div className="buyFast">
-                        <button className="btn btn-primary">MUA VÉ NGAY</button>
-                    </div>
-                </div>
+                <PickingFast/>
                 <ul className="nav nav-pills">
                     <li className="nav-item">
                         <a className="nav-link active" data-toggle="pill" href="#onSelling">
@@ -271,8 +246,21 @@ export default class CatalougeFilm extends Component {
                         </div>
                     </div>
                 </div>
-
             </div>
         )
     }
 }
+
+const mapDispatchToProps = dispatch => {
+    return{
+        getListMovie: ()=> {
+            dispatch(actGetListMovieAPI());
+        }
+    }
+}
+const mapStateToProps = state => {
+    return{
+        listMovie : state.movieReducer.listMovie
+    }
+}
+export default connect (mapStateToProps,mapDispatchToProps)(CatalougeFilm);

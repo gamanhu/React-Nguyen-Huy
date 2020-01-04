@@ -10,7 +10,7 @@ import {routesHome} from "./routes";
 const showPage = routes => {
   if(routes && routes.length>0){
     return routes.map((item,index)=>{
-      return <Route path = {item.path} exact = {item.exact} component = {item.component}/>
+      return <Route key={index} path = {item.path} exact = {item.exact} component = {item.component}/>
     })
   }
 }
@@ -22,7 +22,7 @@ function App() {
       <Navbar/>
       <Switch>
         {showPage(routesHome)}
-        <Route path="" component= {PageNotFound}/>
+        <Route path=""  component= {PageNotFound}/>
       </Switch>
     </BrowserRouter>
   );
