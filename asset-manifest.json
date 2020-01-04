@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/React-Nguyen-Huy/static/css/main.c860a651.chunk.css",
+    "main.js": "/React-Nguyen-Huy/static/js/main.aa307abb.chunk.js",
+    "main.js.map": "/React-Nguyen-Huy/static/js/main.aa307abb.chunk.js.map",
+    "runtime-main.js": "/React-Nguyen-Huy/static/js/runtime-main.4818e357.js",
+    "runtime-main.js.map": "/React-Nguyen-Huy/static/js/runtime-main.4818e357.js.map",
+    "static/css/2.17e5ed98.chunk.css": "/React-Nguyen-Huy/static/css/2.17e5ed98.chunk.css",
+    "static/js/2.00d1d017.chunk.js": "/React-Nguyen-Huy/static/js/2.00d1d017.chunk.js",
+    "static/js/2.00d1d017.chunk.js.map": "/React-Nguyen-Huy/static/js/2.00d1d017.chunk.js.map",
+    "index.html": "/React-Nguyen-Huy/index.html",
+    "precache-manifest.98e8f3d3aab97e5e003130d2a3ac1d20.js": "/React-Nguyen-Huy/precache-manifest.98e8f3d3aab97e5e003130d2a3ac1d20.js",
+    "service-worker.js": "/React-Nguyen-Huy/service-worker.js",
+    "static/css/2.17e5ed98.chunk.css.map": "/React-Nguyen-Huy/static/css/2.17e5ed98.chunk.css.map",
+    "static/css/main.c860a651.chunk.css.map": "/React-Nguyen-Huy/static/css/main.c860a651.chunk.css.map",
+    "static/js/2.00d1d017.chunk.js.LICENSE": "/React-Nguyen-Huy/static/js/2.00d1d017.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4818e357.js",
+    "static/css/2.17e5ed98.chunk.css",
+    "static/js/2.00d1d017.chunk.js",
+    "static/css/main.c860a651.chunk.css",
+    "static/js/main.aa307abb.chunk.js"
+  ]
+}
